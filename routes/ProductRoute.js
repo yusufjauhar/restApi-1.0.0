@@ -15,4 +15,8 @@ router.post('/products', saveProduct);
 router.patch('/products/:id', updateProduct);
 router.delete('/products/:id', deleteProduct);
 
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
 export default router;
