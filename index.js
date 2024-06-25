@@ -11,7 +11,11 @@ app.use(FileUpload());
 app.use(express.static("public"));
 app.use(ProductRoute);
 
-app.listen(5000, ()=> console.log('Server Up and Running...'));
+
+
+const PORT = 5000
+app.listen(process.env.PORT || PORT,()=> console.log('run server' + PORT) );
+// app.listen(5000, ()=> console.log('Server Up and Running...'));
 
 
 
